@@ -14,3 +14,11 @@ If any issue occurs, feel free to post in issues!
 如有需要请自行调试。
 
 曾在2015年开始为NFLChina译稿时用于抓取官方高清图片，能够直接批量下载任一相册中所有原图，免除手动保存的烦恼。
+
+## Description - 参考说明
+
+由于暂时没有时间整理，先把之前写的一个简单的文档链接放在这里，如果以后真的需要凑项目经历再来完善。
+
+[Python日常小记 - NFL官网相册下载](https://yo1995.github.io/coding/NFL-album-download/)
+
+Only Chinese version of description is available right now. If I decide to pursue a SDE position, I will wrap it up later.
