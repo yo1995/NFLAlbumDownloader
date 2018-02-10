@@ -8,6 +8,7 @@ from selenium import webdriver
 
 
 # url = 'https://www.nfl.com/photos/0ap3000000633956'
+# e.g. SB L HFTM show
 
 
 def validate_title(title):
@@ -52,8 +53,12 @@ def page_loop():
                         flink = link.replace(u'thumbnail_200_200', u'gallery_600')
                         content2 = urllib.request.urlopen(flink).read()
                     except Exception as e:
-                        print(u'Not Found or Bad Request !')
-                        continue
+                        try:
+                            flink = link.replace(u'_thumbnail_200_200', u'_pg_600')
+                            content2 = urllib.request.urlopen(flink).read()
+                        except Exception as e:
+                            print(u'Not Found or Bad Request !')
+                            continue
             else:
                 j = 1
 

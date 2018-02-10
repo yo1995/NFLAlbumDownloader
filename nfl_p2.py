@@ -44,9 +44,13 @@ def page_loop():
           try:
             flink = link.replace(u'thumbnail_200_200',u'gallery_600')
             content2 = urllib2.urlopen(flink).read()
-          except Exception, e:
-            print u'Not Found or Bad Request !'
-            continue
+          except Exception as e:
+            try:
+              flink = link.replace(u'_thumbnail_200_200', u'_pg_600')
+              content2 = urllib.request.urlopen(flink).read()
+            except Exception as e:
+              print(u'Not Found or Bad Request !')
+              continue
       else:
         j = 1
 
